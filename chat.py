@@ -3,11 +3,19 @@ import os
 from ultralytics import YOLO
 
 
-bot = telebot.TeleBot("7250952575:AAElJxVJINJdT3elaUYfFvBNuDTatfxea6A")
+def getapi():
+    with open("getapi.txt", 'r') as file:
+        token = file.readline()
+    return token
+token = getapi()
+
+bot = telebot.TeleBot(token)
 model = YOLO("model/yolov8n.pt")
 model = YOLO("model/ourModel/best.pt")
 
 pictext = ['.jpg', 'jpeg', '.png']
+
+
 @bot.message_handler(content_types=['document'])
 def handle_document(message):
     file_info = bot.get_file(message.document.file_id)
@@ -31,6 +39,7 @@ def handle_document(message):
             os.remove(os.path.join("userimgs", filename))
             bot.reply_to(message,
                          "На данном фото дефектов не обнаружено")
+
 
 @bot.message_handler(commands=['help'])
 def help(message):

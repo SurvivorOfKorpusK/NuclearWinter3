@@ -1,0 +1,2 @@
+ultralytics==8.2.32
+pyTelegramBotAPI==4.19.1
