@@ -11,7 +11,7 @@ token = getapi()
 
 bot = telebot.TeleBot(token)
 model = YOLO("model/yolov8n.pt")
-model = YOLO("model/ourModel/best.pt")
+model = YOLO("model/train23/weights/best.pt")
 
 pictext = ['.jpg', 'jpeg', '.png']
 
