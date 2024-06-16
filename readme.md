@@ -1,4 +1,4 @@
-https://t.me/NuclearVisionbot
+ссылка на развернутого бота - https://t.me/NuclearVisionbot
 Чтобы развернуть бота нужно:
 1 у вас должна быть установлена версия питона не ниже чем 3.9
 2 Скачать библиотеки ultralytics и pyTelegramBotAPI версии 4.19.1
